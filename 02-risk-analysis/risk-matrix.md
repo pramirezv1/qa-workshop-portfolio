@@ -1,8 +1,8 @@
 # Risk Matrix
-| ID | Riesgo | Impacto | Probabilidad | Nivel | Justificación |
+| ID | Riesgo | Impacto | Probabilidad | Nivel | Mitigación | Justificación |
 |----|--------|---------|--------------|-------|---------------|
-| R1 | [Riesgo] | Alto | Alta | Crítico | [Por qué] |
-| R2 | [Riesgo] | Alto | Media | Alto | [Por qué] |
-| R3 | [Riesgo] | Medio | Alta | Alto | [Por qué] |
-| R4 | [Riesgo] | Medio | Media | Medio | [Por qué] |
-| R5 | [Riesgo] | Bajo | Media | Bajo | [Por qué] |
+| R1 | Al visualizar la imagen de un producto no corresponde al producto real seleccionado | Alto | Alta | Crítico | Validación de consistencia entre backend y frontend + pruebas de regresión en catálogo | Afecta directamente la confianza del usuario y puede generar compras incorrectas o pérdida de credibilidad del sistema |
+| R2 | Permite agregar una cantidad exagerada de productos en el campo de "quantity" | Alto | Media | Alto | Validación de límites máximos de cantidad en frontend y backend | Puede generar errores en stock, sobrecarga de pedidos o inconsistencias en inventario |
+| R3 | Permite realizar la compra de productos que estan sin stock (va de la mano con el R2) | Alto | Alta | Crítico | Validación de stock en tiempo real antes de permitir el checkout | Impacta directamente en ventas inválidas, problemas logísticos y mala experiencia del cliente |
+| R4 | | Lentitud del sistema | Medio | Media | Medio | Optimización de consultas, caché y pruebas de performance | Afecta la experiencia del usuario pero no bloquea completamente el flujo de compra |
+| R5 | No se ve la cantidad de stock del producto | Bajo | Media | Bajo | Mostrar stock disponible en UI o indicar disponibilidad básica | Impacto limitado, pero mejora la transparencia para el usuario en la decisión de compra |
