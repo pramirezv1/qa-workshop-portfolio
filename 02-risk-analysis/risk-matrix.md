@@ -1,6 +1,6 @@
 # Risk Matrix
-| ID | Riesgo | Impacto | Probabilidad | Nivel | Mitigación | Justificación |
-|----|--------|---------|--------------|-------|---------------|
+| ID | Riesgo | Impacto | Probabilidad | Nivel | Mitigacion | Justificacion |
+|----|--------|---------|--------------|-------|---------------|--------------|
 | R1 | Al visualizar la imagen de un producto no corresponde al producto real seleccionado | Alto | Alta | Crítico | Validación de consistencia entre backend y frontend + pruebas de regresión en catálogo | Afecta directamente la confianza del usuario y puede generar compras incorrectas o pérdida de credibilidad del sistema |
 | R2 | Permite agregar una cantidad exagerada de productos en el campo de "quantity" | Alto | Media | Alto | Validación de límites máximos de cantidad en frontend y backend | Puede generar errores en stock, sobrecarga de pedidos o inconsistencias en inventario |
 | R3 | Permite realizar la compra de productos que estan sin stock (va de la mano con el R2) | Alto | Alta | Crítico | Validación de stock en tiempo real antes de permitir el checkout | Impacta directamente en ventas inválidas, problemas logísticos y mala experiencia del cliente |
